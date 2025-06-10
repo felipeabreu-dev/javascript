@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        var cidades = 'Manchester, Liverpool, Londres, Birmingham, Leeds'
+
+        // Separa Strings
+        var arrayCidades = cidades.split(',')
+
+        // Junta arrays
+        var cidadesNovo = arrayCidades.join(', ')
+        console.log(cidadesNovo)
+
+        var cachorros = ['caramelo', 'bulldog', 'vira-lata', 'pit-monster']
+        // Transforma Arrays em Strings
+        console.log(cachorros.toString())
+
+        // Adiciona ao final do Array
+        arrayCidades.push('Cardiff')
+        console.log(arrayCidades)
+
+        // Remove o último valor do array
+        arrayCidades.pop()
+        console.log(arrayCidades)
+
+        // Adiciona o valor no início do array
+        arrayCidades.unshift('Edinburgh')
+        console.log(arrayCidades)
+
+        // Remove o valor do início do array
+        arrayCidades.shift()
+        console.log(arrayCidades)
+        
+    </script>
+</body>
+</html>

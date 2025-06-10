@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos String</title>
+</head>
+<body>
+    <div class="output">
+        <ul></ul>
+    </div>
+
+    <script>
+        var lista = document.querySelector('.output ul')
+        lista.innerHTML = ''
+
+        var cidades = [
+            'lonDon',
+            'ManCHESTer',
+            'BiRmiNGHAM',
+            'liVERpoOL'
+        ]
+        
+        for (var i = 0; i < cidades.length; i++) {
+            var maiusculas = cidades[i].toUpperCase()
+            var minusculas = cidades[i].toLowerCase()
+
+            var resultado = maiusculas.replace(maiusculas.slice(1), minusculas.slice(1))
+            var listItem = document.createElement('li')
+            listItem.textContent = resultado
+            lista.appendChild(listItem)
+        }
+    </script>
+</body>
+</html>

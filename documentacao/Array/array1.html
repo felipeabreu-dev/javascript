@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <ul></ul>
+
+    <script>
+        var lista = document.querySelector('ul')
+        lista.innerHTML = ''
+        var objetos = ['bola', 'chuteira', 'pincel']
+
+        for (var i = 0; i < objetos.length; i++) {
+            var objeto = objetos[i]
+            var itemLista = document.createElement('li')
+            itemLista.textContent = objeto
+            lista.appendChild(itemLista)
+        }
+    </script>
+</body>
+</html>

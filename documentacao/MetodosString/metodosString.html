@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos String</title>
+</head>
+<body>
+    <div class="output">
+        <ul></ul>
+    </div>
+
+    <script>
+        var lista = document.querySelector('.output ul')
+        lista.innerHTML = ''
+
+        var cumprimentos = [
+            'Happy Birthday!',
+            'Merry Christmas my love',
+            'A happy Christmas to all the family',
+            'You\'re all I want for Christmas',
+            'Get well soon']
+        
+
+        for (var i = 0; i < cumprimentos.length; i++) {
+            var frase = cumprimentos[i]
+            if (frase.indexOf('Christmas') > 0){
+                var result = frase
+                var listItem = document.createElement('li')
+                listItem.textContent = result
+                lista.appendChild(listItem)
+            }
+        }
+    </script>
+</body>
+</html>
