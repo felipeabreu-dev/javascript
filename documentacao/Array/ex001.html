@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+</head>
+<body>
+    <p>Live output</p>
+    <ul></ul>
+    <p class="valor"></p>
+
+    <script>
+        var lista = document.querySelector('ul')
+        lista.innerHTML = ''
+        var valorTotal = document.querySelector('.valor')
+        valorTotal.innerHTML = 'Total: $0.00'
+        var total = 0
+
+        var products = [
+            'Underpants:6.99',
+            'Socks:5.99',
+            'T-shirt:14.99',
+            'Trousers:31.99',
+            'Shoes:23.99'
+        ]
+
+        for (var i = 0; i < products.length; i++) {
+            var separador = products[i].indexOf(':')
+            var nomeProduto = products[i].slice(0, separador)
+            var valorProduto = Number(products[i].slice(separador + 1))
+            var stringResultado = nomeProduto + ' - $' + valorProduto
+            total += valorProduto
+            
+            var itemLista = document.createElement('li')
+            itemLista.textContent = stringResultado
+            lista.appendChild(itemLista)
+
+            valorTotal.innerHTML = 'Total: $' + total.toFixed(2)
+        }
+    </script>
+</body>
+</html>

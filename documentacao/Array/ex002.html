@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h2>Live Outuput</h2>
+    <div class="output">
+        <input type="text" name="pesquisa" id="ipesquisa">
+        <button type="submit">Search</button>
+
+        <ul></ul>
+    </div>
+
+    <script>
+        var lista = document.querySelector('.output ul')
+        lista.innerHTML = ''
+        var searchInput = document.querySelector('.output input')
+        var botaoPesquisa = document.querySelector('.output button')
+
+        var historico = []
+
+        botaoPesquisa.onclick = function () {
+            if (searchInput.value !== '') {
+                var valorPesquisa = searchInput.value
+                historico.unshift(valorPesquisa)
+
+                lista.innerHTML = ''
+
+                for (var i = 0; i < historico.length; i++) {
+                    
+                    var itemLista = document.createElement('li')
+                    itemLista.textContent = historico[i]
+                    lista.appendChild(itemLista)
+                }
+
+                if (historico.length >= 5) {
+                    historico.pop()
+                }
+
+                searchInput.value = '';
+                searchInput.focus();
+            }
+        }
+    </script>
+</body>
+</html>
