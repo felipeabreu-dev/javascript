@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elseif</title>
+</head>
+
+<body>
+    <select name="selcao" id="iselecao">
+        <option value="Janeiro">Janeiro</option>
+        <option value="Fevereiro">Fevereiro</option>
+        <option value="Março">Março</option>
+        <option value="Abril">Abril</option>
+        <option value="Maio">Maio</option>
+        <option value="Junho">Junho</option>
+        <option value="Julho">Julho</option>
+        <option value="agust">Agosto</option>
+        <option value="september">Setembro</option>
+        <option value="octubre">Outubro</option>
+        <option value="november">Novembro</option>
+        <option value="december">Dexembro</option>
+    </select>
+
+    <h1></h1>
+    <ul></ul>
+
+    <script>
+        var select = document.querySelector('select');
+        var list = document.querySelector('ul');
+        var h1 = document.querySelector('h1');
+
+        select.onchange = function () {
+            var choice = select.value;
+
+            // ADD CONDITIONAL HERE
+
+            createCalendar(days, choice);
+        }
+
+        function createCalendar(days, choice) {
+            list.innerHTML = '';
+            h1.textContent = choice;
+            for (var i = 1; i <= days; i++) {
+                var listItem = document.createElement('li');
+                listItem.textContent = i;
+                list.appendChild(listItem);
+            }
+        }
+
+        createCalendar(31, 'January');
+
+    </script>
+</body>
+
+</html>

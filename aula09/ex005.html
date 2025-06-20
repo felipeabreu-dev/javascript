@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primerios passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(79, 145, 231);
+            color: white;
+            font: normal 18pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        let elemento = document.getElementsByTagName("p")[1];
+        document.write(elemento.innerText);
+
+        let div = document.getElementById('msg');
+        div.addEventListener("click", clicou);
+        
+        function clicou() {
+            if (div.innerText === 'Olá') {
+                div.innerHTML = 'Clique em mim';
+            } else {
+                div.innerHTML = 'Olá';
+            }
+        }
+    </script>
+</body>
+</html>
