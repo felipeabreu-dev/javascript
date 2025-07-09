@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <p>
+            <label for="id_marca">Marca: </label>
+            <input type="text" name="marca" id="id_marca">
+        </p>
+        <p>
+            <label for="id_modelo">Modelo: </label>
+            <input type="text" name="modelo" id="id_modelo">
+        </p>
+        <p>
+            <label for="id_ano">Ano: </label>
+            <input type="text" name="ano" id="id_ano">
+        </p>
+
+        <p id="btnEnviar" onclick="resgatarDados()">Enviar</p>
+    </form>
+
+    <div>
+        <p id="mostraDados"></p>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
